@@ -1,13 +1,21 @@
 // MENU RESPONSIVO
-const menuBtn = document.getElementById("menuBtn")   // pega o botão do menu
-const menuLista = document.getElementById("menuLista") // pega a lista de links do menu
+const menuBtn = document.getElementById("menuBtn");
+const menuLista = document.getElementById("menuLista");
 
 if (menuBtn) {
     menuBtn.addEventListener("click", function () {
-        menuLista.classList.toggle("show") // mostra/oculta o menu
-    })
+        menuLista.classList.toggle("show"); // mostra/oculta o menu
+        
+        // ajusta fundo do menu de acordo com o tema
+        if (document.body.classList.contains("dark") && menuLista.classList.contains("show")) {
+            menuLista.style.background = "#1e293b"; // fundo escuro
+        } else if (menuLista.classList.contains("show")) {
+            menuLista.style.background = "#ffffff"; // fundo claro
+        } else {
+            menuLista.style.background = "transparent"; // opcional quando fecha
+        }
+    });
 }
-
 // DARK MODE
 const temaBtn = document.getElementById("temaBtn") // pega botão de tema
 let temaSalvo = localStorage.getItem("tema")       // verifica tema salvo no navegador
