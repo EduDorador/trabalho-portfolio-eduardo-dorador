@@ -1,0 +1,205 @@
+/* estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa; /* fundo claro */
+    color: #1f2933;       /* cor do texto */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* cabeçalho */
+header {
+    background: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #374151;
+}
+
+/* seção principal / hero */
+.hero {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.titulo {
+    font-size: 40px;
+}
+
+.nome {
+    color: #2563eb; /* destaque em azul */
+    font-weight: bold;
+}
+
+.subtitulo {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.linha {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+    width: 70%;
+    margin: 30px auto;
+}
+
+/* conteúdo principal */
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 700px;
+    margin: auto;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 160px;
+    width: 400px;
+    resize: none; /* não permite redimensionar */
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+}
+
+form button:hover {
+    background: #1d4ed8; /* muda cor ao passar o mouse */
+}
+
+/* modo escuro */
+.dark {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.dark header {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+.dark nav a {
+    color: #e2e8f0;
+}
+
+.dark .linha {
+    background: #334155;
+}
+
+.dark .nome {
+    color: #3b82f6;
+}
+
+/* menu responsivo */
+#menuBtn {
+    display: none;
+    font-size: 22px;
+    background: none;
+    border: none;
+}
+
+@media (max-width:600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: white;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+    }
+
+    nav ul.show {
+        display: flex; /* mostra o menu ao clicar */
+    }
+
+    #menuBtn {
+        display: block; /* botão aparece em telas pequenas */
+    }
+}
+
+/* botão de tema */
+#temaBtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 40px;
+}
+
+.dark footer {
+    background: #1e293b;
+    border-top: 1px solid #334155;
+}
+
+/* links de projeto */
+.link-projeto {
+  color: #d48a00;
+  text-decoration: none;
+}
+
+.link-projeto:hover {
+  color: #d48a00;
+}
+
+/* seções e títulos */
+section h2 {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+main h1 {
+    color: #3b82f6;
+}
