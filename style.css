@@ -1,47 +1,27 @@
-/* ===== Geral ===== */
+/* estilo geral da página */
 body {
     font-family: Arial, sans-serif;
-    /* fonte */
     margin: 0;
     background: #f5f7fa;
-    /* fundo claro */
     color: #1f2933;
-    /* cor do texto */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* ===== Header ===== */
+/* cabeçalho */
 header {
     background: #ffffff;
     padding: 15px;
     display: flex;
     justify-content: space-between;
-    /* separa itens */
     align-items: center;
     border-bottom: 1px solid #e5e7eb;
     position: relative;
     /* necessário para menu absoluto */
 }
 
-/* ===== Botão menu ===== */
-#menuBtn {
-    display: none;
-    /* só aparece no celular */
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: #374151;
-    cursor: pointer;
-}
-
-.dark #menuBtn {
-    color: #e2e8f0;
-    /* tema escuro */
-}
-
-/* ===== Menu nav ===== */
+/* menu */
 nav ul {
     list-style: none;
     display: flex;
@@ -55,59 +35,35 @@ nav a {
     color: #374151;
 }
 
-/* ===== Menu responsivo ===== */
-@media (max-width:600px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background: #ffffff;
-        width: 100%;
-        top: 100%;
-        left: 0;
-        padding: 20px;
-        z-index: 100;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    #menuBtn {
-        display: block;
-    }
-
-    nav a {
-        padding: 10px 0;
-    }
-
-    /* fundo do menu aberto no tema escuro */
-    .dark nav ul.show {
-        background: #1e293b !important;
-        /* força fundo escuro */
-    }
+/* seção principal / hero */
+.hero {
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* ===== Tema escuro ===== */
-.dark {
-    background: #0f172a;
-    /* fundo escuro da página */
-    color: #e2e8f0;
-    /* texto claro */
+.titulo {
+    font-size: 40px;
 }
 
-.dark header {
-    background: #1e293b;
-    /* fundo do header */
-    border-bottom: 1px solid #334155;
+.nome {
+    color: #2563eb;
+    font-weight: bold;
 }
 
-.dark nav a {
-    color: #e2e8f0;
-    /* links claros */
+.subtitulo {
+    color: #6b7280;
+    font-size: 18px;
 }
 
-/* ===== Main e Form ===== */
+.linha {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+    width: 70%;
+    margin: 30px auto;
+}
+
+/* conteúdo principal */
 main {
     max-width: 800px;
     margin: auto;
@@ -115,6 +71,7 @@ main {
     flex: 1;
 }
 
+/* formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -153,7 +110,83 @@ form button:hover {
     background: #1d4ed8;
 }
 
-/* ===== Footer ===== */
+/* modo escuro */
+.dark {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.dark header {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+.dark nav a {
+    color: #e2e8f0;
+}
+
+.dark .linha {
+    background: #334155;
+}
+
+.dark .nome {
+    color: #3b82f6;
+}
+
+/* menu responsivo */
+#menuBtn {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #374151;
+    cursor: pointer;
+}
+
+.dark #menuBtn {
+    color: #e2e8f0;
+}
+
+@media (max-width:600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #ffffff;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    /* fundo do menu aberto no tema escuro */
+    .dark nav ul.show {
+        background: #1e293b !important;
+    }
+}
+
+/* botão de tema */
+#temaBtn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* rodapé */
 footer {
     text-align: center;
     padding: 20px;
@@ -167,7 +200,7 @@ footer {
     border-top: 1px solid #334155;
 }
 
-/* ===== Links projeto ===== */
+/* links de projeto */
 .link-projeto {
     color: #d48a00;
     text-decoration: none;
@@ -177,7 +210,7 @@ footer {
     color: #d48a00;
 }
 
-/* ===== Títulos ===== */
+/* seções e títulos */
 section h2 {
     color: #3b82f6;
     border-bottom: 2px solid #3b82f6;
