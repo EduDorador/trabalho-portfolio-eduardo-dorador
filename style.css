@@ -17,7 +17,7 @@ header {
     justify-content: space-between; /* separa itens */
     align-items: center;
     border-bottom: 1px solid #e5e7eb;
-    position: relative;
+    position: relative; /* necessário para menu absoluto */
 }
 
 /* ===== Botão menu ===== */
@@ -49,22 +49,25 @@ nav a {
 /* ===== Menu responsivo ===== */
 @media (max-width:600px) {
     nav ul {
-        display: none; /* escondido */
-        flex-direction: column; /* vertical */
+        display: none; /* escondido por padrão */
+        flex-direction: column; /* links em coluna */
         position: absolute;
-        background: #ffffff; /* fundo claro */
+        background: #ffffff; /* fundo claro no tema claro */
         width: 100%;
         top: 100%; /* abaixo do header */
         left: 0;
         padding: 20px;
         z-index: 100;
     }
+
     nav ul.show {
         display: flex; /* mostra menu */
     }
+
     #menuBtn {
         display: block; /* botão visível */
     }
+
     nav a {
         padding: 10px 0; /* espaço entre links */
     }
@@ -72,18 +75,18 @@ nav a {
 
 /* ===== Tema escuro ===== */
 .dark {
-    background: #0f172a;
-    color: #e2e8f0;
+    background: #0f172a; /* fundo escuro da página */
+    color: #e2e8f0; /* texto claro */
 }
 .dark header {
-    background: #1e293b;
+    background: #1e293b; /* fundo do header */
     border-bottom: 1px solid #334155;
 }
-.dark nav ul {
-    background: #1e293b;
-}
 .dark nav a {
-    color: #e2e8f0;
+    color: #e2e8f0; /* links claros */
+}
+.dark nav ul {
+    background: #1e293b; /* fundo do menu no tema escuro */
 }
 
 /* ===== Main e Form ===== */
