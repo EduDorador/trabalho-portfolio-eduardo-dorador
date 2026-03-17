@@ -1,26 +1,39 @@
-/* estilo geral da página */
+/* ===== Geral ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* fonte */
     margin: 0;
-    background: #f5f7fa;
-    color: #1f2933;
+    background: #f5f7fa; /* fundo claro */
+    color: #1f2933; /* cor do texto */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* cabeçalho */
+/* ===== Header ===== */
 header {
     background: #ffffff;
     padding: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* separa itens */
     align-items: center;
     border-bottom: 1px solid #e5e7eb;
-    position: relative; /* necessário para menu absoluto */
+    position: relative;
 }
 
-/* menu */
+/* ===== Botão menu ===== */
+#menuBtn {
+    display: none; /* só aparece no celular */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #374151;
+    cursor: pointer;
+}
+.dark #menuBtn {
+    color: #e2e8f0; /* tema escuro */
+}
+
+/* ===== Menu nav ===== */
 nav ul {
     list-style: none;
     display: flex;
@@ -28,49 +41,58 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-
 nav a {
     text-decoration: none;
     color: #374151;
 }
 
-/* seção principal / hero */
-.hero {
-    text-align: center;
-    margin-top: 40px;
+/* ===== Menu responsivo ===== */
+@media (max-width:600px) {
+    nav ul {
+        display: none; /* escondido */
+        flex-direction: column; /* vertical */
+        position: absolute;
+        background: #ffffff; /* fundo claro */
+        width: 100%;
+        top: 100%; /* abaixo do header */
+        left: 0;
+        padding: 20px;
+        z-index: 100;
+    }
+    nav ul.show {
+        display: flex; /* mostra menu */
+    }
+    #menuBtn {
+        display: block; /* botão visível */
+    }
+    nav a {
+        padding: 10px 0; /* espaço entre links */
+    }
 }
 
-.titulo {
-    font-size: 40px;
+/* ===== Tema escuro ===== */
+.dark {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+.dark header {
+    background: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+.dark nav ul {
+    background: #1e293b;
+}
+.dark nav a {
+    color: #e2e8f0;
 }
 
-.nome {
-    color: #2563eb;
-    font-weight: bold;
-}
-
-.subtitulo {
-    color: #6b7280;
-    font-size: 18px;
-}
-
-.linha {
-    border: none;
-    height: 1px;
-    background: #e5e7eb;
-    width: 70%;
-    margin: 30px auto;
-}
-
-/* conteúdo principal */
+/* ===== Main e Form ===== */
 main {
     max-width: 800px;
     margin: auto;
     padding: 20px;
     flex: 1;
 }
-
-/* formulário */
 form {
     display: flex;
     flex-direction: column;
@@ -78,21 +100,17 @@ form {
     max-width: 700px;
     margin: auto;
 }
-
-input,
-textarea {
+input, textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
 }
-
 textarea {
     height: 160px;
     width: 100%;
     resize: none;
 }
-
 form button {
     padding: 12px;
     border: none;
@@ -104,83 +122,11 @@ form button {
     width: 100%;
     margin-top: 5px;
 }
-
 form button:hover {
     background: #1d4ed8;
 }
 
-/* modo escuro */
-.dark {
-    background: #0f172a;
-    color: #e2e8f0;
-}
-
-.dark header {
-    background: #1e293b;
-    border-bottom: 1px solid #334155;
-}
-
-.dark nav a {
-    color: #e2e8f0;
-}
-
-.dark .linha {
-    background: #334155;
-}
-
-.dark .nome {
-    color: #3b82f6;
-}
-
-/* menu responsivo */
-#menuBtn {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: #374151;
-    cursor: pointer;
-}
-
-.dark #menuBtn {
-    color: #e2e8f0;
-}
-
-@media (max-width:600px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        background: #ffffff;
-        width: 100%;
-        top: 100%;
-        left: 0;
-        padding: 20px;
-        z-index: 100;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    #menuBtn {
-        display: block;
-    }
-
-    nav a {
-        padding: 10px 0;
-    }
-}
-
-/* botão de tema */
-#temaBtn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* rodapé */
+/* ===== Footer ===== */
 footer {
     text-align: center;
     padding: 20px;
@@ -188,30 +134,27 @@ footer {
     border-top: 1px solid #e5e7eb;
     margin-top: 40px;
 }
-
 .dark footer {
     background: #1e293b;
     border-top: 1px solid #334155;
 }
 
-/* links de projeto */
+/* ===== Links projeto ===== */
 .link-projeto {
     color: #d48a00;
     text-decoration: none;
 }
-
 .link-projeto:hover {
     color: #d48a00;
 }
 
-/* seções e títulos */
+/* ===== Títulos ===== */
 section h2 {
     color: #3b82f6;
     border-bottom: 2px solid #3b82f6;
     padding-bottom: 6px;
     margin-bottom: 15px;
 }
-
 main h1 {
     color: #3b82f6;
 }
