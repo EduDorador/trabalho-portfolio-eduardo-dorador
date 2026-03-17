@@ -1,9 +1,12 @@
 /* ===== Geral ===== */
 body {
-    font-family: Arial, sans-serif; /* fonte */
+    font-family: Arial, sans-serif;
+    /* fonte */
     margin: 0;
-    background: #f5f7fa; /* fundo claro */
-    color: #1f2933; /* cor do texto */
+    background: #f5f7fa;
+    /* fundo claro */
+    color: #1f2933;
+    /* cor do texto */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,23 +17,28 @@ header {
     background: #ffffff;
     padding: 15px;
     display: flex;
-    justify-content: space-between; /* separa itens */
+    justify-content: space-between;
+    /* separa itens */
     align-items: center;
     border-bottom: 1px solid #e5e7eb;
-    position: relative; /* necessário para menu absoluto */
+    position: relative;
+    /* necessário para menu absoluto */
 }
 
 /* ===== Botão menu ===== */
 #menuBtn {
-    display: none; /* só aparece no celular */
+    display: none;
+    /* só aparece no celular */
     font-size: 1.8rem;
     background: none;
     border: none;
     color: #374151;
     cursor: pointer;
 }
+
 .dark #menuBtn {
-    color: #e2e8f0; /* tema escuro */
+    color: #e2e8f0;
+    /* tema escuro */
 }
 
 /* ===== Menu nav ===== */
@@ -41,6 +49,7 @@ nav ul {
     padding: 0;
     margin: 0;
 }
+
 nav a {
     text-decoration: none;
     color: #374151;
@@ -74,21 +83,28 @@ nav a {
 
     /* fundo do menu aberto no tema escuro */
     .dark nav ul.show {
-        background: #1e293b !important; /* força fundo escuro */
+        background: #1e293b !important;
+        /* força fundo escuro */
     }
 }
 
 /* ===== Tema escuro ===== */
 .dark {
-    background: #0f172a; /* fundo escuro da página */
-    color: #e2e8f0; /* texto claro */
+    background: #0f172a;
+    /* fundo escuro da página */
+    color: #e2e8f0;
+    /* texto claro */
 }
+
 .dark header {
-    background: #1e293b; /* fundo do header */
+    background: #1e293b;
+    /* fundo do header */
     border-bottom: 1px solid #334155;
 }
+
 .dark nav a {
-    color: #e2e8f0; /* links claros */
+    color: #e2e8f0;
+    /* links claros */
 }
 
 /* ===== Main e Form ===== */
@@ -98,6 +114,7 @@ main {
     padding: 20px;
     flex: 1;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -105,17 +122,21 @@ form {
     max-width: 700px;
     margin: auto;
 }
-input, textarea {
+
+input,
+textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
 }
+
 textarea {
     height: 160px;
     width: 100%;
     resize: none;
 }
+
 form button {
     padding: 12px;
     border: none;
@@ -127,6 +148,7 @@ form button {
     width: 100%;
     margin-top: 5px;
 }
+
 form button:hover {
     background: #1d4ed8;
 }
@@ -139,6 +161,7 @@ footer {
     border-top: 1px solid #e5e7eb;
     margin-top: 40px;
 }
+
 .dark footer {
     background: #1e293b;
     border-top: 1px solid #334155;
@@ -149,6 +172,7 @@ footer {
     color: #d48a00;
     text-decoration: none;
 }
+
 .link-projeto:hover {
     color: #d48a00;
 }
@@ -160,6 +184,7 @@ section h2 {
     padding-bottom: 6px;
     margin-bottom: 15px;
 }
+
 main h1 {
     color: #3b82f6;
 }
