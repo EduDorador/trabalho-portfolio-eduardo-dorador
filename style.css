@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f5f7fa; /* fundo claro */
-    color: #1f2933;       /* cor do texto */
+    background: #f5f7fa;
+    color: #1f2933;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e5e7eb;
+    position: relative; /* necessário para menu absoluto */
 }
 
 /* menu */
@@ -44,7 +45,7 @@ nav a {
 }
 
 .nome {
-    color: #2563eb; /* destaque em azul */
+    color: #2563eb;
     font-weight: bold;
 }
 
@@ -88,8 +89,8 @@ textarea {
 
 textarea {
     height: 160px;
-    width: 400px;
-    resize: none; /* não permite redimensionar */
+    width: 100%;
+    resize: none;
 }
 
 form button {
@@ -105,7 +106,7 @@ form button {
 }
 
 form button:hover {
-    background: #1d4ed8; /* muda cor ao passar o mouse */
+    background: #1d4ed8;
 }
 
 /* modo escuro */
@@ -134,9 +135,15 @@ form button:hover {
 /* menu responsivo */
 #menuBtn {
     display: none;
-    font-size: 22px;
+    font-size: 1.8rem;
     background: none;
     border: none;
+    color: #374151;
+    cursor: pointer;
+}
+
+.dark #menuBtn {
+    color: #e2e8f0;
 }
 
 @media (max-width:600px) {
@@ -144,19 +151,24 @@ form button:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        background: white;
+        background: #ffffff;
         width: 100%;
-        top: 60px;
+        top: 100%;
         left: 0;
         padding: 20px;
+        z-index: 100;
     }
 
     nav ul.show {
-        display: flex; /* mostra o menu ao clicar */
+        display: flex;
     }
 
     #menuBtn {
-        display: block; /* botão aparece em telas pequenas */
+        display: block;
+    }
+
+    nav a {
+        padding: 10px 0;
     }
 }
 
@@ -184,12 +196,12 @@ footer {
 
 /* links de projeto */
 .link-projeto {
-  color: #d48a00;
-  text-decoration: none;
+    color: #d48a00;
+    text-decoration: none;
 }
 
 .link-projeto:hover {
-  color: #d48a00;
+    color: #d48a00;
 }
 
 /* seções e títulos */
